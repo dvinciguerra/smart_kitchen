@@ -9,7 +9,7 @@ gem "puma", "~> 5.0"
 
 # stores
 gem "sqlite3", "~> 1.4"
-# gem "redis", "~> 4.0"
+gem "redis", "~> 4.0"
 # gem "kredis"
 
 # assets

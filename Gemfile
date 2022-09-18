@@ -33,6 +33,7 @@ gem "tzinfo-data"
 
 group :development, :test do
   gem "debug"
+  gem "byebug"
 end
 
 group :development do

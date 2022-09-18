@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kitchen</title>
+    <title>Smart Kitchen</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,41 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <%= link_to root_url, class:"d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none" do %>
+          <i class="bi bi-egg fs-4"></i>
+          <span class="fs-4 ms-2">Smart Kitchen</span>
+        <% end %>
+
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <%= link_to recipes_url, class: 'nav-link' do %>
+              <i class="bi bi-journal-richtext"></i>
+              <span class="ms-1">Recipes</span>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to users_url, class: 'nav-link' do %>
+              <i class="bi bi-people"></i>
+              <span class="ms-1">Users</span>
+            <% end %>
+          </li>
+        </ul>
+        <div class="dropdown text-end ms-4">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <%= yield %>
+    </div>
   </body>
 </html>

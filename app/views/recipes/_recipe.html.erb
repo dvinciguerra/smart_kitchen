@@ -1,22 +1,44 @@
-<div id="<%= dom_id recipe %>">
-  <p>
-    <strong>Title:</strong>
-    <%= recipe.title %>
-  </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= recipe.description %>
-  </p>
+<div id="<%= dom_id @recipe %>" class="form">
+  <div class="form-group mb-3">
+    <div class="row">
+      <a href="/" class="col-8 align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <h1>
+          <%= @recipe.title %>
+        </h1>
+      </a>
 
-  <p>
-    <strong>Serving:</strong>
-    <%= recipe.serving %>
-  </p>
+      <div class="col-4 align-middle text-end">
+        <!--<%= link_to recipes_path, class: 'btn btn-light btn-sm' do %>
+          <i class="bi bi-journal-richtext"></i>
+          Recipes
+        <% end %>
+        -->
 
-  <p>
-    <strong>Cooking time:</strong>
-    <%= recipe.cooking_time %>
-  </p>
+        <%= link_to edit_recipe_path(@recipe), class: 'btn btn-dark btn-sm' do %>
+          <i class="bi bi-journal-plus"></i>
+          Edit
+        <% end %>
 
+        <%= link_to @recipe, method: :delete, class: 'btn btn-danger btn-sm' do %>
+          <i class="bi bi-journal-plus"></i>
+          Delete
+        <% end %>
+      </div>
+    </div>
+
+    <p class="mb-3">
+      <%= @recipe.description %>
+    </p>
+
+    <div class="row mb-3">
+      <img src="https://picsum.photos/id/292/800/350" class="card-img-top" alt="">
+    </div>
+
+    <p class="mb-3">
+      <small class="text-muted">
+        <%= @recipe.serving %> - <%= @recipe.cooking_time %>
+      </small>
+    </p>
+  </div>
 </div>

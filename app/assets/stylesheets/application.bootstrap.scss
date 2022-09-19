@@ -1,16 +1,9 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
-$theme-colors: (
-  "primary":    $gray-800,
-  "secondary":  $gray-200,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
-);
+body {
+  background-color: #f8f6f2;
+}
 
 .debug {
   border: solid 1px $red;

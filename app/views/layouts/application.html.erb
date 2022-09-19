@@ -11,10 +11,10 @@
   </head>
 
   <body>
-    <div class="container">
-      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <header class="py-3 mb-4 border-bottom bg-light">
+      <div class="container d-flex flex-wrap justify-content-center ">
         <%= link_to root_url, class:"d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none" do %>
-          <i class="bi bi-egg fs-4"></i>
+          <i class="bi bi-egg-fried fs-4"></i>
           <span class="fs-4 ms-2">Smart Kitchen</span>
         <% end %>
 
@@ -43,17 +43,21 @@
             <li><a class="dropdown-item" href="#">Sign out</a></li>
           </ul>
         </div>
-      </header>
+      </div>
+    </header>
 
+    <div class="container">
       <%= yield %>
+    </div>
 
-      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+    <footer class="container-fluid py-5 mt-5 border-top bg-light">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
         <div class="col mb-3">
           <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-            <i class="bi bi-egg fs-4"></i>
+            <i class="bi bi-egg-fried fs-4"></i>
             <span class="fs-4 ms-2">Smart Kitchen</span>
           </a>
-          <p class="text-muted">© 2022</p>
+          <p class="text-muted">© <%= Time.zone.now.year %> </p>
         </div>
 
         <div class="col mb-3">
@@ -77,7 +81,7 @@
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Documentation</a></li>
           </ul>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>

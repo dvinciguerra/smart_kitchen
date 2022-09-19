@@ -1,17 +1,19 @@
 
 <div id="<%= dom_id recipe %>" class="col">
   <div class="card shadow-sm">
-    <img src="https://picsum.photos/id/292/300/200" class="card-img-top" alt="">
+    <%= link_to recipe, class: 'text-end' do %>
+      <img src="https://picsum.photos/id/292/300/200" class="card-img-top position-relative" alt="">
+    <% end %>
 
     <div class="card-body">
-      <h5 class="card-title"><%= recipe.title %></h5>
+      <%= link_to recipe, class: 'text-dark text-decoration-none' do %>
+        <h5 class="card-title"><%= recipe.title %></h5>
+      <% end %>
       <p class="card-text">
         <%= recipe.description %>
       </p>
       <div class="d-flex justify-content-between align-items-center">
-        <div class="btn-group">
-          <%= link_to "Show Recipe", recipe, class:"btn btn-sm btn-outline-secondary" %>
-        </div>
+
         <small class="text-muted">
           <%= recipe.serving %> - <%= recipe.cooking_time %>
         </small>

@@ -11,24 +11,32 @@
     </div>
   <% end %>
 
-  <div class="form-group mb-3">
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title, class: 'form-control' %>
+  <div class="row mb-3">
+    <%= form.label :title, class: 'col-sm-1 col-form-label' %>
+    <div class="col-sm-11">
+      <%= form.text_field :title, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="form-group mb-3">
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description, class: 'form-control' %>
+  <div class="row mb-3">
+    <%= form.label :description, class: 'col-sm-1 col-form-label'%>
+    <div class="col-sm-11">
+      <%= form.text_area :description, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="form-group mb-3">
-    <%= form.label :serving, style: "display: block" %>
-    <%= form.text_field :serving, class: 'form-control' %>
+  <div class="row mb-3">
+    <%= form.label :serving, class: 'col-sm-1 col-form-label'%>
+    <div class="col-sm-11">
+      <%= form.text_field :serving, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="form-group mb-3">
-    <%= form.label :cooking_time, style: "display: block" %>
-    <%= form.text_field :cooking_time, class: 'form-control' %>
+  <div class="row mb-3">
+    <%= form.label :cooking_time, class: 'col-sm-1 col-form-label'%>
+    <div class="col-sm-11">
+      <%= form.text_field :cooking_time, class: 'form-control' %>
+    </div>
   </div>
 
   <div class="form-group mb-3">

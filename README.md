@@ -1,24 +1,16 @@
-# README
+# SmartKitchen
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A cookbook webapp inspired by Cookpad to keep personal recipes and shop list organized.
 
-Things you may want to cover:
+> **Warning**
+> This project is under development and may contain some undone features!
 
-* Ruby version
+![](./screenshot.png)
 
-* System dependencies
+## License
 
-* Configuration
+MIT
 
-* Database creation
+## Author
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Daniel Vinciguerra

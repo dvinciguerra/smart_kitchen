@@ -49,3 +49,5 @@ group :development do
   # gem "spring"
 end
 
+
+gem "database_cleaner-active_record", "~> 2.0", :group => :test

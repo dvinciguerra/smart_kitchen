@@ -39,9 +39,9 @@
           </li>
         </ul>
         <div class="dropdown text-end ms-4">
-          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <%= link_to @current_user, class: "d-block link-dark text-decoration-none dropdown-toggle", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
             <img src="<%= @current_user.profile_image_url %>" alt="" width="32" height="32" class="rounded-circle">
-          </a>
+          <% end %>
           <ul class="dropdown-menu text-small">
             <li><a class="dropdown-item" href="#">Settings</a></li>
             <li><a class="dropdown-item" href="#">Profile</a></li>

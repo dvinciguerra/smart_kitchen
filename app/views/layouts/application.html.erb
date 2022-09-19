@@ -15,18 +15,24 @@
       <div class="container d-flex flex-wrap justify-content-center ">
         <%= link_to root_url, class:"d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none" do %>
           <i class="bi bi-egg-fried fs-4"></i>
-          <span class="fs-4 ms-2">Smart Kitchen</span>
+          <span class="fs-4 ms-2"><strong>Smart</strong>Kitchen</span>
         <% end %>
 
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <%= link_to recipes_url, class: 'nav-link' do %>
+            <%= link_to recipes_url, class: 'nav-link text-dark' do %>
               <i class="bi bi-journal-richtext"></i>
               <span class="ms-1">Recipes</span>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to users_url, class: 'nav-link' do %>
+            <%= link_to '#', class: 'nav-link text-dark' do %>
+              <i class="bi bi-search"></i>
+              <span class="ms-1">Search</span>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to users_url, class: 'nav-link text-dark' do %>
               <i class="bi bi-people"></i>
               <span class="ms-1">Users</span>
             <% end %>
@@ -55,9 +61,9 @@
         <div class="col mb-3">
           <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
             <i class="bi bi-egg-fried fs-4"></i>
-            <span class="fs-4 ms-2">Smart Kitchen</span>
+            <span class="fs-4 ms-2"><strong>Smart</strong>Kitchen</span>
           </a>
-          <p class="text-muted">© <%= Time.zone.now.year %> </p>
+          <p class="text-muted">&copy; <%= Time.zone.now.year %> </p>
         </div>
 
         <div class="col mb-3">
@@ -65,7 +71,7 @@
         </div>
 
         <div class="col mb-3">
-          <h5 class="fs-6">Smart Kitchen</h5>
+          <h5 class="fs-6"><strong>Smart</strong>Kitchen</h5>
           <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Recipes</a></li>

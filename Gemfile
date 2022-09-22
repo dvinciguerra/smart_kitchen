@@ -29,7 +29,7 @@ gem "bcrypt", "~> 3.1.7"
 
 # others
 gem "tzinfo-data"
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
 
 group :development, :test do
   gem "debug"
@@ -39,15 +39,18 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
 
-  gem "rubocop-rails"
-  gem "solargraph"
+  gem "rubocop", require: false
+  gem "solargraph", require: false
+end
+
+group :test do
+  gem "database_cleaner-active_record", "~> 2.0", :group => :test
 end
 
 group :development do
   gem "web-console"
   gem "rack-mini-profiler"
+  gem "rubocop-rails", require: false
   # gem "spring"
 end
 
-
-gem "database_cleaner-active_record", "~> 2.0", :group => :test

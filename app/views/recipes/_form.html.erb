@@ -11,35 +11,28 @@
     </div>
   <% end %>
 
-  <div class="row mb-3">
-    <%= form.label :title, class: 'col-sm-1 col-form-label' %>
-    <div class="col-sm-11">
-      <%= form.text_field :title, class: 'form-control' %>
-    </div>
+  <div class="form-floating mb-3">
+    <%= form.text_field :title, class: 'form-control', placeholder: 'Pizza' %>
+    <%= form.label :title %>
   </div>
 
-  <div class="row mb-3">
-    <%= form.label :description, class: 'col-sm-1 col-form-label'%>
-    <div class="col-sm-11">
-      <%= form.text_area :description, class: 'form-control' %>
-    </div>
+  <div class="form-floating mb-3">
+    <%= form.text_area :description, class: 'form-control', placeholder: 'Pizza' %>
+    <%= form.label :description %>
   </div>
 
-  <div class="row mb-3">
-    <%= form.label :serving, class: 'col-sm-1 col-form-label'%>
-    <div class="col-sm-11">
-      <%= form.text_field :serving, class: 'form-control' %>
-    </div>
+  <div class="form-floating mb-3">
+    <%= form.text_field :serving, class: 'form-control', placeholder: '2 people' %>
+    <%= form.label :serving %>
   </div>
 
-  <div class="row mb-3">
-    <%= form.label :cooking_time, class: 'col-sm-1 col-form-label'%>
-    <div class="col-sm-11">
-      <%= form.text_field :cooking_time, class: 'form-control' %>
-    </div>
+  <div class="form-floating mb-3">
+    <%= form.text_field :cooking_time, class: 'form-control', placeholder: '45 minutes' %>
+    <%= form.label :cooking_time %>
   </div>
 
   <div class="form-group mb-3">
     <%= form.submit "Save Recipe", class: 'btn btn-dark' %>
+    <%= link_to "Never mind!", recipes_path, class: 'btn btn-secondary' %>
   </div>
 <% end %>

@@ -1,0 +1,40 @@
+<header class="py-3 mb-4 border-bottom bg-light">
+  <div class="container d-flex flex-wrap justify-content-center ">
+    <%= link_to root_url, class:"d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none" do %>
+      <i class="bi bi-egg-fried fs-4"></i>
+      <span class="fs-4 ms-2"><strong>Smart</strong>Kitchen</span>
+    <% end %>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <%= link_to recipes_url, class: 'nav-link text-dark' do %>
+          <i class="bi bi-journal-richtext"></i>
+          <span class="ms-1">Recipes</span>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to '#', class: 'nav-link text-dark' do %>
+          <i class="bi bi-search"></i>
+          <span class="ms-1">Search</span>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to users_url, class: 'nav-link text-dark' do %>
+          <i class="bi bi-people"></i>
+          <span class="ms-1">Users</span>
+        <% end %>
+      </li>
+    </ul>
+    <div class="dropdown text-end ms-4">
+      <%= link_to @current_user, class: "d-block link-dark text-decoration-none dropdown-toggle", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
+        <img src="<%= @current_user.profile_image_url %>" alt="" width="32" height="32" class="rounded-circle">
+      <% end %>
+      <ul class="dropdown-menu text-small">
+        <li><%= link_to "Settings", users_settings_path, class: "dropdown-item" %></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+</header>

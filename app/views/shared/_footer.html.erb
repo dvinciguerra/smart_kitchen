@@ -1,0 +1,33 @@
+<footer class="container-fluid py-5 mt-5 border-top bg-light">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+    <div class="col mb-3">
+      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+        <i class="bi bi-egg-fried fs-4"></i>
+        <span class="fs-4 ms-2"><strong>Smart</strong>Kitchen</span>
+      </a>
+      <p class="text-muted">&copy; <%= Time.zone.now.year %> </p>
+    </div>
+
+    <div class="col mb-3">
+
+    </div>
+
+    <div class="col mb-3">
+      <h5 class="fs-6"><strong>Smart</strong>Kitchen</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><%= link_to "Home", root_path, class: "nav-link p-0 text-muted" %></li>
+        <li class="nav-item mb-2"><%= link_to "Recipes", recipes_path, class: "nav-link p-0 text-muted" %></li>
+        <li class="nav-item mb-2"><%= link_to "Users", users_path, class: "nav-link p-0 text-muted" %></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5 class="fs-6">About</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">GitHub</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Issues</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Documentation</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

@@ -6,4 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+load Rails.root.join('db/seeds/development/users.seeds.rb') if Rails.env.development?
+
 load Rails.root.join('db/seeds/recipes.seeds.rb')

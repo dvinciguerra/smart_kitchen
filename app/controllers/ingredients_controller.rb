@@ -1,31 +1,27 @@
-class IngredientsController < ApplicationController
-  before_action :set_ingredient, only: %i[ show edit update destroy ]
+# frozen_string_literal: true
 
-  # GET /ingredients or /ingredients.json
+# Recipe Ingredients Controller
+class IngredientsController < ApplicationController
+  before_action :set_ingredient, only: %i[show edit update destroy]
+
   def index
     @ingredients = Ingredient.all
   end
 
-  # GET /ingredients/1 or /ingredients/1.json
-  def show
-  end
+  def show; end
 
-  # GET /ingredients/new
   def new
     @ingredient = Ingredient.new
   end
 
-  # GET /ingredients/1/edit
-  def edit
-  end
+  def edit; end
 
-  # POST /ingredients or /ingredients.json
   def create
     @ingredient = Ingredient.new(ingredient_params)
 
     respond_to do |format|
       if @ingredient.save
-        format.html { redirect_to ingredient_url(@ingredient), notice: "Ingredient was successfully created." }
+        format.html { redirect_to ingredient_url(@ingredient), notice: 'Ingredient was successfully created.' }
         format.json { render :show, status: :created, location: @ingredient }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +34,7 @@ class IngredientsController < ApplicationController
   def update
     respond_to do |format|
       if @ingredient.update(ingredient_params)
-        format.html { redirect_to ingredient_url(@ingredient), notice: "Ingredient was successfully updated." }
+        format.html { redirect_to ingredient_url(@ingredient), notice: 'Ingredient was successfully updated.' }
         format.json { render :show, status: :ok, location: @ingredient }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +48,20 @@ class IngredientsController < ApplicationController
     @ingredient.destroy
 
     respond_to do |format|
-      format.html { redirect_to ingredients_url, notice: "Ingredient was successfully destroyed." }
+      format.html { redirect_to ingredients_url, notice: 'Ingredient was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_ingredient
-      @ingredient = Ingredient.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def ingredient_params
-      params.require(:ingredient).permit(:recipe_id, :name, :amount)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_ingredient
+    @ingredient = Ingredient.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def ingredient_params
+    params.require(:ingredient).permit(:recipe_id, :name, :amount)
+  end
 end

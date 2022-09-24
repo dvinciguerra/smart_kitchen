@@ -1,0 +1,23 @@
+<%= ingredients.each do |ingredient| %>
+  <div class="col-md-2">
+    <div class="form-floating mb-3">
+      <%= form.text_field :amount, class: 'form-control', placeholder: '1 spoon', value: ingredient.amount %>
+      <%= form.label :amount %>
+    </div>
+  </div>
+
+  <div class="col-md-9">
+    <div class="form-floating mb-3">
+      <%= form.text_field :name, class: 'form-control', placeholder: 'Cheese', value: ingredient.name %>
+      <%= form.label :name %>
+    </div>
+  </div>
+
+  <div class="col-md-1 h-100 text-end align-middle">
+    <%= link_to "#", class: 'btn btn-outline-danger p-3', data: { action: "click->ingredients-form#remove" } do %>
+      <i class="bi bi-trash"></i>
+    <% end %>
+  </div>
+
+  <%= form.hidden_field :_destroy %>
+<% end %>

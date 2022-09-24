@@ -26,9 +26,28 @@
     <%= form.label :serving %>
   </div>
 
-  <div class="form-floating mb-3">
+  <div class="form-floating mb-5">
     <%= form.text_field :cooking_time, class: 'form-control', placeholder: '45 minutes' %>
     <%= form.label :cooking_time %>
+  </div>
+
+  <div data-controller='ingredients-form'>
+    <div class="form-group mb-3">
+      <h3 class="fs-4">
+        Ingredients
+        <button data-action="click->ingredients-form#add" class="btn btn-sm btn-dark float-end">
+          <i class="bi bi-plus"></i> New Ingredient
+        </button>
+      </h3>
+    </div>
+
+    <%= form.fields_for :ingredients, recipe.ingredients.build, child_index: 'NEW_RECORD' do |ingredient| %>
+      <template data-target="ingredients-form.template">
+        <%= render "ingredient_field", form: ingredient %>
+      </template>
+
+      <%= render "ingredient_fields", form: ingredient, ingredients: recipe.ingredients %>
+    <% end %>
   </div>
 
   <div class="form-group mb-3">

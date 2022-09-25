@@ -9,13 +9,17 @@
       <%= link_to recipe, class: 'text-dark text-decoration-none' do %>
         <h5 class="card-title"><%= recipe.title %></h5>
       <% end %>
+
       <p class="card-text">
         <%= recipe.description %>
       </p>
-      <div class="d-flex justify-content-between align-items-center">
 
+      <div class="d-flex justify-content-between align-items-center">
         <small class="text-muted">
-          <%= recipe.serving %> - <%= recipe.cooking_time %>
+          <i class="bi bi-clock"></i> <%= recipe.cooking_time %>
+        </small>
+        <small class="text-muted">
+          <i class="bi bi-person"></i> <%= recipe.serving %>
         </small>
       </div>
     </div>

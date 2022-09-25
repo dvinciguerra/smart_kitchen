@@ -9,12 +9,6 @@
       </a>
 
       <div class="col-4 align-middle text-end">
-        <!--<%= link_to recipes_path, class: 'btn btn-light btn-sm' do %>
-          <i class="bi bi-journal-richtext"></i>
-          Recipes
-        <% end %>
-        -->
-
         <%= link_to edit_recipe_path(@recipe), class: 'btn btn-dark btn-sm' do %>
           <i class="bi bi-journal-plus"></i>
           Edit
@@ -35,10 +29,22 @@
       <img src="https://picsum.photos/id/292/800/350" class="card-img-top" alt="">
     </div>
 
-    <p class="mb-3">
-      <small class="text-muted">
-        <%= @recipe.serving %> - <%= @recipe.cooking_time %>
-      </small>
+    <p class="mb-3 fs-7">
+      <i class="bi bi-person"></i> <%= @recipe.serving %>
+      <i class="bi bi-clock"></i> <%= @recipe.cooking_time %>
     </p>
+
+    <div class="row mb-3">
+      <h3 class="fs-3">Ingredients</h3>
+    </div>
+
+    <div class="row mb-4">
+      <% @recipe.ingredients.each do |ingredient| %>
+        <p class="mb-2 ps-4">
+          <strong><%= ingredient.amount %></strong>  <%= ingredient.name %>
+        </p>
+      <% end %>
+    </div>
+
   </div>
 </div>
